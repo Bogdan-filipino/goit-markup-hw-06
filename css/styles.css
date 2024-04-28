@@ -176,6 +176,7 @@ p {
   padding: 72px 24px 40px 16px;
   display: flex;
   flex-direction: column;
+  z-index: 999;
   justify-content: space-between;
   overflow: auto;
   opacity: 0;
@@ -194,8 +195,8 @@ p {
 
 .mob-menu-list {}
 
-.mob-menu-list:hover,
-.mob-menu-list:focus {
+.mob-menu-link:hover,
+.mob-menu-link:focus {
   color: #404bbf;
 }
 
@@ -219,7 +220,17 @@ p {
 
 .mob-contacts {}
 
-.mob-contacts-list {
+
+
+.mob-contacts-list {}
+
+
+
+.mob-contacts-list-item {}
+
+
+
+.mob-contacts-link {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -234,10 +245,6 @@ p {
 .mob-contacts-tel {
   color: #4d5ae5;
 }
-
-.mob-contacts-list-item {}
-
-.mob-contacts-link {}
 
 .mob-icon-list {
   display: flex;
@@ -387,11 +394,8 @@ p {
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  max-width: 264px;
   margin-bottom: 8px;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .features-list-text {
@@ -400,7 +404,7 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  max-width: 264px;
+
 }
 
 /* =====================features end========== */
@@ -412,7 +416,7 @@ p {
   background: #f4f4fd;
   /* padding-bottom: 120px;
   padding-top: 120px; */
-  padding: 96px 28px;
+  padding: 96px 0;
 
 }
 
@@ -430,7 +434,7 @@ p {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
   margin: 0;
   padding-left: 0;
 }
@@ -458,6 +462,8 @@ p {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+
+
 }
 
 .team-item-text {
@@ -1219,7 +1225,7 @@ p {
     .solutions {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)),
-        url(../images/hero-dsk-2x.jpg);
+        url(../images/Dark-bg-decs-2x.jpg);
     }
   }
 
@@ -1232,8 +1238,9 @@ p {
     display: flex;
   }
 
-  /* .features {
-      padding: 120px 0;}   */
+  .features {
+    padding: 120px;
+  }
 
   .features-list {
     display: flex;
@@ -1241,8 +1248,30 @@ p {
     gap: 24px;
   }
 
+  .features-list-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .features-list-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    font-weight: normal;
+
+  }
+
   .features-list-item {
-    width: calc((100% -3 * 24px) / 4);
+    width: calc((100% - 72px) / 4);
   }
 
   .team-list {
